@@ -14,7 +14,7 @@ public class WaitAndNotify {
 
 	private static Queue<LocalDateTime> queue = new LinkedList<>();
 	private static int MAX_SIZE = 10;
-	private static BlockingQueue<LocalDateTime> blockQueue = new LinkedBlockingQueue<>(10);
+	private static BlockingQueue<LocalDateTime> blockQueue = new LinkedBlockingQueue<>(MAX_SIZE);
 	
 	public static class Producer implements Runnable {
 
