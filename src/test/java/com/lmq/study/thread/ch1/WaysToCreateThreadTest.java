@@ -17,13 +17,13 @@ public class WaysToCreateThreadTest {
 	public @Test void testByExtendsThread() throws InterruptedException {
 		Thread thread = WaysToCreateThread.byExtendsThread();
 		thread.start();
-		thread.join();
+		thread.join(); // 这是嘛？
 	}
 	
 	public @Test void testByImplRunnable() throws InterruptedException {
 		Thread thread = WaysToCreateThread.byImplRunnable(() -> log.info("I am the thread that implements Runnable"));
 		thread.start();
-		thread.join();
+		thread.join(); // 这是嘛？
 	}
 	
 	public @Test void testByImplCallable() throws InterruptedException, ExecutionException {
@@ -32,7 +32,7 @@ public class WaysToCreateThreadTest {
 			return OK;
 		});
 		FutureTask<String> future = threadByCall.start();
-		log.info("Result: " + future.get());
+		log.info("Result: " + future.get()); // 为嘛不join了？
 	}
 	
 	public @Test void testAll() throws InterruptedException, ExecutionException {

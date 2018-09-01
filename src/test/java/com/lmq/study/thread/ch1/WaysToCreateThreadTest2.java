@@ -19,7 +19,7 @@ public class WaysToCreateThreadTest2 {
 	public @Test void testByExtendsThread() throws InterruptedException {
 		Thread thread = WaysToCreateThread.byExtendsThread(latch);
 		thread.start();
-		latch.await();
+		latch.await(); // 这是？取代join的？
 	}
 	
 	public @Test void testByImplRunnable() throws InterruptedException {

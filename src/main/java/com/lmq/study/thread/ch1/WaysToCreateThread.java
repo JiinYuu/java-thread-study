@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class WaysToCreateThread {
 	
-	private static CountDownLatch latch;
+	private static CountDownLatch latch; // 这个干什么用的？
 
 	public static Thread byExtendsThread() {
 		return new ThreadByExtends();
@@ -34,7 +34,7 @@ public class WaysToCreateThread {
 		public @Override void run() {
 			log.info("I am the thread that extends Thread");
 			if(Objects.nonNull(latch)) {
-				WaysToCreateThread.latch.countDown();
+				WaysToCreateThread.latch.countDown(); // 这是在干嘛？
 			}
 		}
 	}
