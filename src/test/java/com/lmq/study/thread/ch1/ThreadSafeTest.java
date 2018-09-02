@@ -6,7 +6,7 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 import com.lmq.study.thread.ch1.ThreadSafe.ThreadNotSafe;
-import com.lmq.study.thread.ch1.ThreadSafe.ThreadBeSafe;
+import com.lmq.study.thread.ch1.ThreadSafe.ThreadMayBeSafe;
 
 public class ThreadSafeTest {
 
@@ -29,7 +29,7 @@ public class ThreadSafeTest {
 	}
 	
 	public @Test void testThreadBeSafe() throws InterruptedException {
-		Runnable r1 = new ThreadBeSafe();
+		Runnable r1 = new ThreadMayBeSafe();
 		List<Thread> ts = new ArrayList<>(20);
 		for(int i = 0; i < 20; i++) {
 			Thread t = WaysToCreateThread.byImplRunnable(r1);
