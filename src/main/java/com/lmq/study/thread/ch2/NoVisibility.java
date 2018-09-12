@@ -1,4 +1,4 @@
-package com.lmq.study.thread.ch1;
+package com.lmq.study.thread.ch2;
 
 import lombok.extern.slf4j.Slf4j;
 
