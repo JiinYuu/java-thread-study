@@ -12,7 +12,7 @@ public class ConnectionDispenser {
 			try {
 				return DriverManager.getConnection(DB_URL);
 			} catch (SQLException e) {
-				throw new RuntimeException("Unable to acquire Connection, e");
+				throw new RuntimeException("Unable to acquire Connection", e);
 			}
 		};
 	};
