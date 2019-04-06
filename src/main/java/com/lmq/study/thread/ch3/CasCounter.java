@@ -5,7 +5,7 @@ import com.lmq.study.thread.annotation.ThreadSafe;
 @ThreadSafe
 public class CasCounter {
 
-	private SimulatedCAS value;
+	private SimulatedCAS value = new SimulatedCAS();
 	
 	public int getValue() {
 		return this.value.get();
